@@ -2,4 +2,4 @@
 Сервер для работы управлением антенной решетки
 Проект сервера сильно вырван из общего проекта, поэтому для сборки недоступен.
 Файлы предоставлены только как ознакомление с стилем программирования.
-Основная часть написанного мной кода содержится в Operatory_vzaimodejstviya_s_priborami,MWSwitchModule, main, afar_server_client_visualize_plugin и afar_server_application. Остальные файлы генерируются автоматически.
+Основная часть написанного мной кода содержится в Operatory_vzaimodejstviya_s_priborami,MWSwitchModule, main, afar_server_client_visualize_plugin и afar_server_application.А также CMakeFile. Остальные файлы генерируются автоматически.
