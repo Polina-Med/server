@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <module name="Операторы взаимодействия с приборами">
+        <command name="ДОБАВИТЬ_ПРИБОР_АФАР" short_description="Оператор добавления прибора в список сервера" description="добавление нового прибора в список сервера.&#13;Если прибор с таким именем уже сохранен, то возвращает «НЕ НОРМА»&#13;" header="DOBAVIT_PRIBOR_AFAR(QString, QString, int)">
+            <param name="имя_прибора" description="Имя для обращения к прибору" type="строка">
+                <default/>
+            </param>
+            <param name="сетевой_адрес" description="Сетевой адрес прибора в " type="строка">
+                <default/>
+            </param>
+            <param name="порт" description="Сетевой порт прибора" type="целое">
+                <limit step="1" right="65535" left="0"/>
+                <default/>
+            </param>
+        </command>
+        <command name="ПОДКЛЮЧИТЬ_ПРИБОР_АФАР" short_description="Оператор подключения прибора " description="подключение к прибору из списка в сервере.&#13;Если подключиться к прибору не получилось, оператор должен выдать сообщение об ошибке.&#13;" header="PODKLYUCHIT_PRIBOR_AFAR(QString)">
+            <param name="имя_прибора" description="Имя для обращения к прибору" type="строка">
+                <default/>
+            </param>
+        </command>
+        <command name="ОТКЛЮЧИТЬ_ПРИБОР_АФАР" short_description="Оператор отключения прибора" description="отключение от прибора с заданным именем.&#13;" header="OTKLYUCHIT_PRIBOR_AFAR(QString)">
+            <param name="имя_прибора" description="Имя для обращения к прибору" type="строка">
+                <default/>
+            </param>
+        </command>
+        <command name="ЗАГРУЗИТЬ_КОМАНДУ_П_АФАР" short_description="Оператор загрузки управляющей команды в прибор" description="выдача SCPI- команды в указанное измерительное устройство.&#13;" header="ZAGRUZIT_KOMANDU_P_AFAR(QString, QString, int)">
+            <param name="имя_прибора" description="Имя для обращения к прибору" type="строка">
+                <default/>
+            </param>
+            <param name="команда" description="Команда управления для загрузки " type="строка">
+                <default/>
+            </param>
+            <param name="время_ожидания" description="Время ожидания исполнения команды в секундах" type="целое">
+                <default/>
+            </param>
+        </command>
+        <command name="ПОЛУЧИТЬ_СООБЩЕНИЕ_П_АФАР" short_description="Оператор получения сообщения из прибора" description="Запись последнего ответного сообщения от прибора в заданную переменную.&#13;" header="POLUCHIT_SOOBSSHENIE_P_AFAR(QString, QVariant&amp;)">
+            <param name="имя_прибора" description="Имя для обращения к прибору" type="строка">
+                <default/>
+            </param>
+            <param name="имя_переменной" description="Переменная для записи ответного сообщения " type="запись">
+                <value description="">Без ограничений </value>
+                <default/>
+            </param>
+        </command>
+        <command name="УПРАВЛЕНИЕ_SPDT_КОММУТАТОРАМИ" short_description="Оператор управления коммутаторами" description=" осуществляет управление SPDT коммутаторами в количестве 3 шт." header="UPRAVLENIE_SPDT_KOMMUTATORAMI(QVariantList)">
+            <param name="МАССИВ" description="" type="массив">
+                <default/>
+            </param>
+        </command>
+        <command name="ЗАПИСАТЬ_ЗНАЧ_СИГНАЛА_БД" short_description="Оператор записи параметра в БД." description="внесение параметра в БД." header="ZAPISAT_ZNACH_SIGNALA_BD(int, QVariant&amp;)">
+            <param name="НОМЕР" description="" type="целое">
+                <default/>
+            </param>
+            <param name="ЗНАЧЕНИЕ" description="" type="запись">
+                <default/>
+            </param>
+        </command>
+        <command name="УДАЛИТЬ_ПРИБОР_АФАР" short_description="Оператор удаления прибора из списка сервера." description="удаление прибора из списка сервера.&#13;Проверяет наличия прибора с указанным именем, если находит такой прибор, то удаляет его из списка сервера.&#13;" header="UDALIT_PRIBOR_AFAR(QString)">
+            <param name="имя_прибора" description="Имя для обращения к прибору" type="строка">
+                <default/>
+            </param>
+        </command>
+    </module>
+</document>
